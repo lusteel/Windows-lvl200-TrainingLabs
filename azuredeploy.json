@@ -148,7 +148,7 @@
       "dependsOn": [
         "[resourceId('Microsoft.Network/networkInterfaces/', variables('nicName'))]"
       ]
-    }
+    } 
   ],
   "outputs": {
     "hostname": {
