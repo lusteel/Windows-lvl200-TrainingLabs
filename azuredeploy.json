@@ -2,40 +2,10 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "adminUsername": {
-      "type": "string",
-      "metadata": {
-        "description": "Username for the Virtual Machine."
-      }
-    },
-    "adminPassword": {
-      "type": "SecureString",
-      "metadata": {
-        "description": "Password for the Virtual Machine."
-      }
-    },
     "dnsLabelPrefix": {
       "type": "string",
       "metadata": {
         "description": "Unique DNS Name for the Public IP used to access the Virtual Machine."
-      }
-    },
-    "galleryName": {
-      "type": "string",
-      "metadata": {
-        "description": "Name of the Shared Image Gallery."
-      }
-    },
-    "galleryImageDefinitionName": {
-      "type": "string",
-      "metadata": {
-        "description": "Name of the Image Definition."
-      }
-    },
-    "galleryImageVersionName": {
-      "type": "string",
-      "metadata": {
-        "description": "Name of the Image Version - should follow <MajorVersion>.<MinorVersion>.<Patch>."
       }
     }
   },
@@ -160,16 +130,11 @@
       "location": "[resourceGroup().location]",
       "properties": {
         "hardwareProfile": {
-          "vmSize": "Standard_A1"
-        },
-        "osProfile": {
-          "computerName": "[variables('vmName')]",
-          "adminUsername": "[parameters('adminUsername')]",
-          "adminPassword": "[parameters('adminPassword')]"
+          "vmSize": "Standard_B2ms"
         },
         "storageProfile": {
           "imageReference": {
-            "id": "[resourceId('Microsoft.Compute/galleries/images/versions', parameters('galleryName'), parameters('galleryImageDefinitionName'), parameters('galleryImageVersionName'))]"
+            "id": "/subscriptions/d0cedf14-51a4-4a36-b3b6-66924477b0b6/resourceGroups/Connectivity-Specialist-TRNG-Students/providers/Microsoft.Compute/galleries/Lvl200TrainingLinux/images/LinuxLab01/versions/1.0.1"
           }
         },
         "networkProfile": {
