@@ -12,13 +12,13 @@
       "value": "GEN-UNIQUE"
     },
     "galleryName": {
-      "value": "myGallery"
+      "value": "Lvl200TrainingLinux"
     },
     "galleryImageDefinitionName": {
-      "value": "myGalleryImageDefinition"
+      "value": "LinuxLab01"
     },
     "galleryImageVersionName": {
-      "value": "myGalleryImageVersion"
+      "value": "1.0.1"
     }
   }
 }
